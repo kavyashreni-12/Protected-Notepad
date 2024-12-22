@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Protected Text App</title>
+  </head>
+
+  <body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page">
+      <form id="loginForm">
+        <h1>Log in</h1>
+        <div class="input-group">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" id="username" placeholder="Username" required />
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" required />
+        </div>
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit">Login</button>
+        <p class="signup-link">
+          Don't have an account? <a href="#" id="registerLink">Register</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Register Page -->
+    <div id="registerPage" class="page" style="display: none;">
+      <form id="registerForm">
+        <h1>Register</h1>
+        <div class="input-group">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" id="newUsername" placeholder="Username" required />
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="newPassword" placeholder="Password" required />
+        </div>
+        <button type="submit">Register</button>
+        <p class="signup-link">
+          Already have an account? <a href="#" id="backToLogin">Login</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Text Editor Page -->
+    <div id="editorPage" class="editorPage" style="display: none;">
+      <div class="header">
+        <h1>Welcome, <span id="welcomeMessage"></span></h1>
+        <button id="saveButton">Save Notes</button>
+      </div>
+      <textarea id="textEditor" placeholder="Write your notes here..."></textarea>
+      <div class="editor-actions">
+        <button id="deleteAccountButton">Delete Account</button>
+        <button id="changePasswordButton">Change Password</button>
+        <button id="logoutButton">Logout</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
