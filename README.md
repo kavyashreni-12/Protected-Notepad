@@ -1,2 +1,2 @@
-# Protected-Notepad-
+# Protected-Notepad
 Protected Notepad
